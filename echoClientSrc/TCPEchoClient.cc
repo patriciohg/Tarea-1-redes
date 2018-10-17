@@ -23,7 +23,7 @@
 #include <iostream>    // For cerr and cout
 #include <cstdlib>     // For atoi()
 
-const u_int RCVBUFSIZE = 0;    // Size of receive buffer
+const u_int RCVBUFSIZE = 2000;    // Size of receive buffer
 using namespace std;
 int main(int argc, char *argv[]) {
 
@@ -40,10 +40,7 @@ int main(int argc, char *argv[]) {
 	echoServPort  = argumentos->getArgs().PORT;
 	nombreArchivo = 	argumentos->getArgs().ARCHIVO;
 	echoString    = "GET / HTTP/1.1\nHost:"+servAddress+"\nUser-Agent: Mozilla/4.0\n\n ";
-	//echoString    = "GET /index.html HTTP/1.1\r\n HOST:"+servAddress+"\r\nPORT:80";
-
 	delete argumentos;
-	
 	int echoStringLen = echoString.length();   // Determine input length
 
 	try {
@@ -59,7 +56,7 @@ int main(int argc, char *argv[]) {
 		// Receive the same string back from the server
 		std::cout << "Received: ";               // Setup to print the echoed string
 		
-		/* weaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
+		/* 
 
 		for (int i = 0; i<3;i++) {
 			// Receive up to the buffer size bytes from the sender
@@ -75,7 +72,7 @@ int main(int argc, char *argv[]) {
 		}
 		RCVBUFSIZE = std::stoi(Bufferlen);
 
-		/*weaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
+		*/
 		while (totalBytesReceived < echoStringLen) {
 
 			// Receive up to the buffer size bytes from the sender
@@ -98,7 +95,6 @@ int main(int argc, char *argv[]) {
 		// Destructor closes the socket
 
 	} catch(SocketException &e) {
-		cout << "c mamo" << endl;
 		std::cerr << e.what() << std::endl;
 		exit(EXIT_FAILURE);
 	
