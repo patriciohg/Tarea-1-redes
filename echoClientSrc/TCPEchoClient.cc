@@ -24,7 +24,7 @@
 #include <iostream>    // For cerr and cout
 #include <cstdlib>     // For atoi()
 
-int RCVBUFSIZE = 150;    // Size of receive buffer
+int RCVBUFSIZE = 10000;    // Size of receive buffer
 using namespace std;
 int main(int argc, char *argv[]) {
 
@@ -58,7 +58,7 @@ int main(int argc, char *argv[]) {
 		
 		// Receive the same string back from the server
 		std::cout << "Received: ";               // Setup to print the echoed string
-		
+		/*<-----------------------------Cambios generados por nosotros----------->
 		while (totalBytesReceived < echoStringLen) {
 			if ((bytesReceived = (sock.recv(echoBuffer, RCVBUFSIZE))) <= 0) {
 				std::cerr << "Unable to read 1";
@@ -87,22 +87,22 @@ int main(int argc, char *argv[]) {
 		
 		// Receive the same string back from the server
 		std::cout << "Received: ";               // Setup to print the echoed string
-		
+		*/
 		while (totalBytesReceived < echoStringLen) {
 
 			// Receive up to the buffer size bytes from the sender
-			if ((bytesReceived = (sock.recv(echoBuffer2, RCVBUFSIZE))) <= 0) {
+			if ((bytesReceived = (sock.recv(echoBuffer, RCVBUFSIZE))) <= 0) {
 				std::cerr << "Unable to read 2";
 				exit(EXIT_FAILURE);	
 				
 			}
 			///
 		    ficheroSalida.open (nombreArchivo);
-		    ficheroSalida << echoBuffer2;	    
+		    ficheroSalida << echoBuffer;	    
 			//
 			totalBytesReceived += bytesReceived;     // Keep tally of total bytes
-			echoBuffer2[bytesReceived] = '\0';        // Terminate the string!
-			std::cout << echoBuffer2;                      // Print the echo buffer
+			echoBuffer[bytesReceived] = '\0';        // Terminate the string!
+			std::cout << echoBuffer;                      // Print the echo buffer
 		}
 		ficheroSalida.close();
 		std::cout << std::endl;

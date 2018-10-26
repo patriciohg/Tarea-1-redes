@@ -1,0 +1,31 @@
+HTTP/1.1 200 OK
+Last-Modified: Mon, 31 Mar 2014 19:14:49 GMT
+Accept-Ranges: bytes
+Content-Length: 873
+Content-Type: text/html
+Date: Fri, 26 Oct 2018 15:18:20 GMT
+Server: Apache/2.2.22 (Ubuntu)
+ETag: "e0004-369-4f5ebdd88d516"
+Vary: Accept-Encoding
+Age: 3884
+X-Cache: HIT from www.cwongreso.cl
+X-Cache-Lookup: HIT from www.cwongreso.cl:80
+Via: 1.1 www.cwongreso.cl (squid/4.1)
+Connection: keep-alive
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Congreso Nacional - CHILE</title>
+</head>
+
+<body>
+<div align="center"><br />
+  <img src="congreso.png" alt="Congreso Nacional Chile" width="758" height="543" border="0" usemap="#Map" />
+<map name="Map" id="Map"><area shape="rect" coords="18,320,129,359" href="http://www.senado.cl" target="_blank" alt="Senado Chile" />
+<area shape="circle" coords="73,416,44" href="http://www.camara.cl" target="_blank" alt="H. Cámara de Diputados Chile" />
+<area shape="rect" coords="22,480,332,508" href="http://www.bcn.cl" target="_blank" alt="Biblioteca del Congreso Nacional de Chile" />
+</map></div>
+</body>
+</html>
