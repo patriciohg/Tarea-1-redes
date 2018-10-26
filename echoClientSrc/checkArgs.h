@@ -14,7 +14,7 @@ private:
 	const std::string descripcion  = "Descripción:\n"
 		                             "\t-s   Nombre del servidor web\n"
 									 "\t-p   Puerto del servidor web\n"
-									 "\t-o   NOMBRE DEL ARCHIVO\n"
+									 "\t-o   Nombre del archivo\n"
 									 "\t-h   Muestra esta ayuda y termina\n";
 	
 	typedef struct args_t{
