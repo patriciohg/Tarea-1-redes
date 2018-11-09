@@ -52,10 +52,11 @@ int main(int argc, char *argv[]) {
 		char echoBuffer[RCVBUFSIZE + 1];    // Buffer for echo string + \0
 		int bytesReceived = 0;              // Bytes read on each recv()
 		int totalBytesReceived = 0;         // Total bytes read
+
 		
 		// Receive the same string back from the server
 		std::cout << "Received: ";               // Setup to print the echoed string
-		while (totalBytesReceived < cont) {
+		while (totalBytesReceived < echoStringLen) {
 			// Receive up to the buffer size bytes from the sender
 			if ((bytesReceived = (sock.recv(echoBuffer,RCVBUFSIZE))) <= 0) {
 				std::cerr << "Unable to read 2";
