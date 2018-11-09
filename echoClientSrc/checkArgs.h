@@ -48,7 +48,7 @@ private:
 checkArgs::checkArgs(int _argc , char **_argv){
 	parametros.SERVER = "";
 	parametros.PORT   = 0;
-	parametros.ARCHIVO   = "index.html";
+	parametros.ARCHIVO   = "";
 	
 	argc = _argc;
 	argv = _argv;
